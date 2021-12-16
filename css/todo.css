@@ -1,54 +1,66 @@
 body {
-  background-color: #181820;
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  padding: 5rem;
 }
 html {
   font-size: 62.5%;
 }
-
-.task-input {
-  background: transparent;
-  border: solid #25252e 2px;
-  border-radius: 20px;
-  height: 2rem;
-  padding: 1rem 1.5rem;
-  width: 25rem;
-  color: #b7b7ba;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-.task-input:focus {
-  outline: 0;
-  border: 0;
-  box-shadow: 0 0 0 2px rgba(223, 167, 223, 0.7);
-}
-.task-input::placeholder {
-  color: #b7b7ba;
+.show-detail {
+  height: 24px;
+  width: 24px;
+  transition: all 0.15s;
 }
 
+.pressed {
+  transform: rotate(90deg);
+}
 .task {
-  height: 2rem;
-  width: 25rem;
+  height: fit-content;
+  width: 48rem;
   margin-top: 1rem;
-  color: #b7b7ba;
+  color: rgb(61, 61, 61);
   padding: 1rem 1.5rem;
-  background-color: #21212b;
+  font-size: 1.3rem;
+  background-color: #f3f3f3;
   border-radius: 15px;
   display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+
+.task-finished {
+  background-color: #8edd9b;
+}
+.task-date {
+  margin-left: 3rem;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.task-date-open {
+  max-height: 50px;
+  opacity: 1;
+}
+.min-detail {
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .task-content {
   text-align: center;
   margin-left: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+}
+.hidden {
+  visibility: hidden;
 }
 
 .task-content-removed {
@@ -60,14 +72,15 @@ html {
   height: 1.8rem;
   border-radius: 5px;
   position: relative;
+  transition: background-color 0.3s;
 }
 
 .checked {
-  background-color: #00ff9d;
+  background-color: #3fff00;
 }
 
 .unchecked {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
   border: 2px solid grey;
 }
