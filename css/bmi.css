@@ -1,0 +1,253 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+p {
+  margin: 0;
+}
+
+.panel {
+  width: 70%;
+  height: 70%;
+  background-color: #f6faff;
+  border: solid 5px #7373ff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+}
+
+.sub-header > p {
+  font-size: large;
+}
+
+.header > p,
+.bmi-result-title {
+  font-size: xx-large;
+}
+
+.header > p > b {
+  color: #7373ff;
+}
+
+.genders {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.gender__male {
+  height: 20rem;
+  width: 20rem;
+  margin-right: 10rem;
+  border-radius: 100%;
+  border: solid 5px transparent;
+  background-color: #f6faff;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 20px 50px 0px;
+  overflow: hidden;
+  transition: all 0.15s;
+}
+.gender__female {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 100%;
+  border: solid 5px transparent;
+  background-color: #f6faff;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 20px 50px 0px;
+  overflow: hidden;
+  transition: all 0.15s;
+}
+
+.gender__male > img {
+  width: 100%;
+  object-fit: fill;
+}
+.gender__female > img {
+  width: 100%;
+  object-fit: fill;
+}
+
+.gender__female:hover,
+.gender__male:hover {
+  border: solid 5px #7373ff;
+}
+
+.measures {
+  width: 60%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.height,
+.weight {
+  border-radius: 10px;
+  margin: 1rem;
+  width: 100%;
+  height: 50%;
+  background-color: #f6faff;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.height-icon {
+  width: 50px;
+  height: 50px;
+  margin-left: -0.8rem;
+}
+.height-icon > p {
+  margin-left: 1rem;
+}
+
+.scale-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+}
+.measure-input {
+  color: white;
+  border-radius: 15px;
+  width: 500px;
+}
+
+.weight-value,
+.height-value {
+  width: 10rem;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-right: 1rem;
+}
+
+.button {
+  width: 30%;
+
+  border-radius: 20px;
+  margin: 0rem auto;
+  background-color: #7373ff;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  font-size: large;
+  padding: 1rem 1.3rem;
+  text-align: center;
+  transition: background-color 0.15s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #8d8dfc;
+}
+
+.gender-selected {
+  border: solid 5px #7373ff;
+}
+
+.popup-container {
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  width: 50%;
+  height: 60%;
+  background-color: #f6faff;
+  border-radius: 20px;
+  padding: 2rem;
+  border: solid 5px #7373ff;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+}
+.show-popup {
+  visibility: visible;
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+.bmi-result {
+  width: 45%;
+  height: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  padding: 4rem;
+}
+
+.bmi-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bmi-result-calculated {
+  font-size: 5rem;
+  color: #7373ff;
+  font-weight: bold;
+}
+.bmi-unit {
+  font-size: 1.5rem;
+}
+
+.weight-description {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}

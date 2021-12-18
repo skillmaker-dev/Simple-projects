@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bmi.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <!--Heading-->
+      <div class="heading">
+        <div class="header">
+          <p><b>BMI</b> Calculator</p>
+        </div>
+        <div class="sub-header">
+          <p>
+            Body mass index (BMI) is a measure of body fat based on height and
+            weight that applies to adult men and women.
+          </p>
+        </div>
+      </div>
+      <div class="genders">
+        <div class="gender__male gender-selected">
+          <img src="images/man.png" alt="man" />
+        </div>
+        <div class="gender__female">
+          <img src="images/woman.png" alt="woman" />
+        </div>
+      </div>
+      <div class="measures">
+        <div class="height">
+          <div class="icon-description">
+            <img src="images/height.png" alt="height" class="height-icon" />
+            <p>Height</p>
+          </div>
+          <div class="slider-value">
+            <input
+              min="20"
+              max="250"
+              type="range"
+              id="height-range"
+              class="measure-input"
+            />
+          </div>
+          <div class="height-value">180Cm</div>
+        </div>
+        <div class="weight">
+          <div class="icon-description">
+            <img
+              src="images/weight-scale.png"
+              alt="weight"
+              class="scale-icon"
+            />
+            <p>Weight</p>
+          </div>
+          <div class="slider-value">
+            <input
+              min="1"
+              max="300"
+              type="range"
+              id="weight-range"
+              class="measure-input"
+            />
+          </div>
+          <div class="weight-value">50Kg</div>
+        </div>
+      </div>
+      <div class="button calculate">Calculate yout BMI</div>
+    </div>
+
+    <div class="popup-container">
+      <div class="popup">
+        <div class="close">
+          <img
+            class="close-btn"
+            src="images/cancel.png"
+            alt="close-window"
+            width="20px"
+            height="20px"
+          />
+        </div>
+        <div class="heading">
+          <div class="header">
+            <p><b>Your</b> Summary</p>
+          </div>
+        </div>
+        <div class="bmi-result">
+          <p class="bmi-result-title">Your BMI is</p>
+          <div class="bmi-calculated">
+            <p class="bmi-result-calculated">65</p>
+          </div>
+          <p class="bmi-unit">Kg/m2</p>
+          <p class="weight-description"></p>
+        </div>
+      </div>
+    </div>
+    <script src="js/bmi.js"></script>
+  </body>
+</html>

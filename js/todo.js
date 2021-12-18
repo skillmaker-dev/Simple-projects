@@ -75,9 +75,6 @@ taskDetail.addEventListener("keyup",function(event) {
             parent.nextElementSibling.classList.toggle("task-date-open");
           });
         
-        
-          
-        
       });
     
     
