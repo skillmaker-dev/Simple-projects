@@ -46,17 +46,11 @@ p {
 }
 
 .gender__male {
-  height: 20rem;
-  width: 20rem;
   margin-right: 10rem;
-  border-radius: 100%;
-  border: solid 5px transparent;
-  background-color: #f6faff;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 20px 50px 0px;
-  overflow: hidden;
-  transition: all 0.15s;
 }
-.gender__female {
+.gender__female,
+.gender__male {
+  cursor: pointer;
   width: 20rem;
   height: 20rem;
   border-radius: 100%;
@@ -67,15 +61,11 @@ p {
   transition: all 0.15s;
 }
 
-.gender__male > img {
-  width: 100%;
-  object-fit: fill;
-}
+.gender__male > img,
 .gender__female > img {
   width: 100%;
   object-fit: fill;
 }
-
 .gender__female:hover,
 .gender__male:hover {
   border: solid 5px #7373ff;
@@ -230,9 +220,6 @@ p {
   margin-right: auto;
   margin-top: 4rem;
   padding: 4rem;
-}
-
-.bmi-result {
   display: flex;
   flex-direction: column;
   align-items: center;
